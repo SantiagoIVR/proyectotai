@@ -1,22 +1,24 @@
 import React from "react"
-import fotoplayera from "../fotos/playeraroja.jpeg"
 import "./estilos/Prenda.css"
 
 class Prenda extends React.Component{
     render(){
+        const {foto, colorfondo, color, talla, escribe} = this.props
         return (<div className="ficha">
                     <div className="bordeazul">
                         <div className="divfoto">
-                            <img src={fotoplayera} className="fotito" alt="hola"/>
+                            <img src={foto} className="fotito" alt="hola"/>
                         </div>
-                        <div className="infoprenda">
+                        <div className="infoprenda" style={{
+                            backgroundColor: `${colorfondo}`
+                        }}>
                             <div className="detalle">
-                                Playera roja
+                                Color: {color}
                             </div>
                         </div>
                         <div className="alert alert-primary" role="alert">
-                            Tienda de playeras
-                            <input type="text" className="from-control" placeholder="Playera"/>
+                            Playera de talla: {talla}
+                            <input type="text" className="form-control" placeholder={escribe}/>
                         </div>
                         <div>
                             <button type="button" className="btn btn-success">Aceptar</button>

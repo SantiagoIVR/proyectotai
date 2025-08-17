@@ -1,10 +1,10 @@
 import React from "react";
 import "./estilos/Tipoprenda.css"
 
-function Tipoprenda()
+function Tipoprenda(props)
 {
     return(
-        <div id="titulo">Prenda Oversize</div>
+        <div id="titulo">Prenda {props.tipo}</div>
     )
 }
 
