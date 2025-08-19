@@ -1,6 +1,6 @@
 import React from "react";
-import Prenda from "../componentes/Prenda"
 import Tipoprenda from "../componentes/Tipoprenda"
+import Listaprendas from "../componentes/Listaprendas";
 
 class Reporteprendas extends React.Component{
     constructor(props){
@@ -38,16 +38,12 @@ class Reporteprendas extends React.Component{
                     modelo="Overzise"/>
                 </div>
                 <div>
-                    {this.state.datos.map((reporte) => {
-                        return(
-                            <Prenda
-                            color={reporte.color}
-                            talla={reporte.talla}
-                            escribe="Escribe algo..."
-                            foto={reporte.foto}
-                            colorfondo={reporte.colorfondo}/>
-                        )
-                    })}
+                    <a href="/Alta" className="btn btn-primary streched-link">Alta de prenda</a>
+                </div>
+                <div>
+                    <Listaprendas
+                        detalleprenda = {this.state.datos}
+                    />
                 </div>
             </div>)
     }

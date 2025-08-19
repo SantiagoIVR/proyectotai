@@ -1,9 +1,9 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
-import Reporteprendas from "./pages/Reporteprendas"
+import Tiendaropa from "./componentes/Tiendaropa"
 import "bootstrap/dist/css/bootstrap.css"
 
-const elemento = (<div><Reporteprendas/></div>)
+const elemento = (<div><Tiendaropa/></div>)
 
 const container = document.getElementById("root")
 const root = createRoot(container)
